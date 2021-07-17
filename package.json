@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "types": "types/index.d.ts",
   "scripts": {
+    "build": "npm i --save-dev",
     "test": "node test/index"
   },
   "engines": {
