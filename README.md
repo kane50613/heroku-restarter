@@ -1,4 +1,4 @@
-# heroku-restarter
+# <img src="https://raw.githubusercontent.com/heroku/favicon/master/favicon.iconset/icon_32x32.png"> heroku-restarter
 Restart your Heroku app with simple **one-line** code!
 
 ---
