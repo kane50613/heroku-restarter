@@ -1,0 +1,17 @@
+{
+  "name": "heroku-restarter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node test/index"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "author": "Gary50613",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
