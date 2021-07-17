@@ -10,7 +10,7 @@ class Restarter {
 	}
 
 	async list() {
-		let response = await fetch(`${Heroku.API_ENDPOINT}/apps/${name}/dynos`, {
+		let response = await fetch(`${Heroku.API_ENDPOINT}/apps/${this.name}/dynos`, {
 			headers: {
 				Authorization: `Bearer ${this.#token}`,
 				Accept: "application/vnd.heroku+json; version=3"
