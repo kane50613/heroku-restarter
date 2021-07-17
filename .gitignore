@@ -1,5 +1,4 @@
 .idea
 heroku-restarter.iml
-package-lock.json
 .env
 node_modules
