@@ -9,7 +9,7 @@ npm i heroku-restarter
 
 ## Example
 ```js
-require("../src/index")("API_KEY", "APP_NAME").restart()
+require("heroku-restarter")("API_KEY", "APP_NAME").restart()
 ```
 look how simple it is
 
