@@ -1,5 +1,6 @@
 const fetch = require("node-fetch")
 const Heroku = require("./Heroku")
+const RequestError = require("./RequestError");
 
 class Restarter {
 	#token
@@ -17,13 +18,15 @@ class Restarter {
 			}
 		})
 
+		let json = await response.json()
+
 		if(response.status === 200)
 			return await response.json()
-		else throw {
-			code: response.status,
-			response: await response.json(),
-			error: new Error(`Error while trying to list dynos`)
-		}
+		else throw new RequestError(
+			json.message ?? `Error while trying to listing dynos`,
+			json,
+			response.status
+		)
 	}
 
 	async restart(id) {
@@ -36,14 +39,15 @@ class Restarter {
 			}
 		})
 
+		let json = await response.json()
+
 		if(response.status === 202)
 			return true
-		else throw {
-			code: response.status,
-			response: await response.json(),
-			error: new Error(`Error while trying to restart dynos`),
-			id
-		}
+		else throw new RequestError(
+			json.message ?? `Error while trying to delete dyno(s)`,
+			json,
+			response.status
+		)
 	}
 }
 
