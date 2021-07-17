@@ -7,3 +7,5 @@ module.exports = (token, name) => {
 		throw new Error(`App name is required`)
 	return new Restarter(token, name)
 }
+
+module.exports.Restarter = Restarter
